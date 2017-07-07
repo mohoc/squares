@@ -1,0 +1,78 @@
+**29/06/2017
+* article
+celui de Francesco et d'Elise
+cf boîte mail
+
+* article
+Squares in Binary Partial Words
+F. Blanchet-Sadri, Yang Jiao and John M. Machacek
+>= 2011
+https://www.uncg.edu/cmp/research/squares3/Squares-Conference.pdf
+
+* diapo
+The Combinatorics of Overlapping Squares
+Bill Smyth
+24 April 2013
+https://www.fields.utoronto.ca/programs/scientific/12-13/words/slides/Smyth.pdf
+
+* article
+The three-squares lemma for partial words with one hole
+F. Blanchet-Sadri, Robert Mercaş
+>= 2011
+http://ac.els-cdn.com/S0304397512000400/1-s2.0-S0304397512000400-main.pdf?_tid=77b32eec-5cf6-11e7-b6ee-00000aab0f02&acdnat=1498760111_1cd39a2af9658f96cfcd548942679052
+
+* article
+How Many Squares Can a String Contain ?
+Aviezri S. Fraenkel, Jamie Simpson
+May 12, 1997
+http://ac.els-cdn.com/S0097316597928430/1-s2.0-S0097316597928430-main.pdf?_tid=5115c1fc-5cf9-11e7-be4c-00000aab0f27&acdnat=1498761333_1d746e344892dfe6911ea11dd564ab08
+
+* article
+A simple proof that a word of length n has at most 2n distinct squares
+Lucian Ilie
+received 2 November 2004, available online 2 March 2005
+http://ac.els-cdn.com/S0097316505000130/1-s2.0-S0097316505000130-main.pdf?_tid=421495d8-5d18-11e7-9f75-00000aab0f6c&acdnat=1498774623_3c7f0a33f138b39bec6d816382813f9a
+
+* article
+The exact number of squares in Fibonacci words
+Aviezri S. Fraenkel, Jamie Simpson 
+1999
+http://ac.els-cdn.com/S0304397598002527/1-s2.0-S0304397598002527-main.pdf?_tid=23c14f4a-5d09-11e7-bb39-00000aacb362&acdnat=1498768129_1741a2c87e01fe151ce7a97cad9c6ac6
+
+* diapo
+Computational approaches to the maximum number of distinct squares
+Mei Jiang, joint work with Antoine Deza and Frantisek Franek
+November 22, 2011
+http://optlab.mcmaster.ca/~jiangm5/docs/advolNov2011.pdf
+
+**30/06/2017
+* article
+ENUMERATION OF FACTORS IN HE THUE-MORSE WORD
+Srecko BRLEK
+Received 27 October 1988
+http://ac.els-cdn.com/0166218X9290274E/1-s2.0-0166218X9290274E-main.pdf?_tid=30e9bfee-5dc8-11e7-b436-00000aacb362&acdnat=1498850185_b9046aaaadd87895f959fb74e7f82fd9
+
+* article
+Computing Primitively-Rooted Squares and Runs in Partial Words
+F. Blanchet-Sadri, Jordan Nikkel, J.D. Quigley and Xufan Zhang
+
+* article
+Repetitions in strings : Algorithms and combinatorics
+MaximeCrochemore, LucianIlie, WojciechRytter
+2009
+http://ac.els-cdn.com/S0304397509006070/1-s2.0-S0304397509006070-main.pdf?_tid=0781990c-5dcc-11e7-84fd-00000aab0f01&acdnat=1498851833_2b24a1105fb7912b2c8ca95accf27aff
+
+(
+* article
+M.G.Main, R.J.Lorentz, An O(nlogn) algorithm for finding all repetitions in a string, J.Algorithms 5 (3) (1984) 422–432.
+)
+
+* article
+Linear time algorithms for finding and representing all the tandem repeats in a string
+Dan Gusfield and Jens Stoye
+2004
+http://ac.els-cdn.com/S0022000004000364/1-s2.0-S0022000004000364-main.pdf?_tid=709ab400-5de0-11e7-a187-00000aacb360&acdnat=1498860600_158b31f30419cc5ce4b97f6d2623288e
+
+* programme
+Strmat
+http://web.cs.ucdavis.edu/~gusfield/strmat.html
