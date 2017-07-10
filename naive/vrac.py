@@ -57,6 +57,14 @@ def sq_rich(n) :
     bloc0 += "0"
   return s
 
+def sq_rich_odd_exponents(n) :
+  s = ""
+  bloc0 = "0"
+  for _ in range(n) :
+    s += bloc0 + "001" + bloc0 + "1" + bloc0 + "001"
+    bloc0 += "00"
+  return s
+
 def study_of_sq_rich(n, m) :
   word = sq_rich(n)
   bloc0 = "0" * n
@@ -69,9 +77,41 @@ def study_of_sq_rich(n, m) :
     bloc0 += "0"
     word_len += 3 * (i + 1) + 5
 
-%prun( study_of_sq_rich(50) )
-#for i in range(20) :
-#  print(sq_rich(i))   
+def sq_rich_of(u, n) :
+  s = ""
+  for i in range(n) :
+    s += "0" * u(i) + "1" + "0" * u(i + 1) + "1" + "0" * u(i)
+  return s
+
+def fibo(n) :
+  if n == 0 :
+    return 0
+  elif n == 1 :
+    return 1
+  else :
+    f1 = 0
+    f2 = 1
+    for i in range(n) :
+      inter = f2
+      f2 = f1 + f2
+      f1 = inter
+    return f2
+
+
+
+print("n\tlen\tnb sq\tdefect")
+for i in range(16) :
+  word = sq_rich_of(fibo, i)
+  word_len = len(word)
+  nb_squares = naive.nb_squares(word)
+  print("{}\t{}\t{}\t{}".format(i, word_len, nb_squares, word_len - nb_squares + 1))
+
+#%prun( study_of_sq_rich(50) )
+
+
+
+for i in range(16) :
+  print(sq_rich_of(fibo, i))   
     
 
 #sq_rich(4)
