@@ -76,3 +76,6 @@ http://ac.els-cdn.com/S0022000004000364/1-s2.0-S0022000004000364-main.pdf?_tid=7
 * programme
 Strmat
 http://web.cs.ucdavis.edu/~gusfield/strmat.html
+
+* page wikipedia
+Ukkonen's algorithm
