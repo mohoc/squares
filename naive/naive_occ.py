@@ -82,13 +82,14 @@ def squares_info(word, with_end_pos) :
   print("### number of squares : {}".format(nb_squares))
   print("### square distribution ({}) :".format(pos_chosen))
   print_squares_distribution(sq_distrib)
-  print("### squares :")
-  for square, positions in squares_positions :
-    nb_pos = len(positions)
-    print("{}\t{}\t{}".format(square, nb_pos, positions[0]), end = "")
-    for i in range(1, nb_pos) :
-      print(",{}".format(positions[i]), end = "")
-    print("")
+  if not input("print the square factors ? [Y/n] : ") in ["n", "N", "no", "No"]:
+    print("### squares :")
+    for square, positions in squares_positions :
+      nb_pos = len(positions)
+      print("{}\t{}\t{}".format(square, nb_pos, positions[0]), end = "")
+      for i in range(1, nb_pos) :
+        print(",{}".format(positions[i]), end = "")
+      print("")
     
     
 

@@ -90,9 +90,10 @@ def squares_info(word) :
   print("### square defect : {}".format(defect))
   print("### square distribution :")
   print_squares_distribution(sq_distrib, ('_', '-', '*'))
-  print("### squares :")
-  for square, first_pos in squares_positions :
-    print("{}\t{}".format(first_pos, square))
+  if not input("print the square factors ? [Y/n] : ") in ["n", "N", "no", "No"]:
+    print("### squares :")
+    for square, first_pos in squares_positions :
+      print("{}\t{}".format(first_pos, square))
 
 def nb_squares(word) :
   return len(squares_inventory(word))
