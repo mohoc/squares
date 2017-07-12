@@ -48,8 +48,8 @@ def sq_rich_of(u, n) :
   """gives the n-th element of the Fraenkel-Simpson construction where
   the exponents are given by the sequence"""
   s = ""
-  for i in range(n) :
-    s += "0" * u(i) + "1" + "0" * u(i + 1) + "1" + "0" * u(i) + "1"
+  for i in range(1, n + 1) :
+    s += "0" * u(i + 1) + "1" + "0" * u(i) + "1" + "0" * u(i + 1) + "1"
   return s
 
 def sq_rich_study(n, m, u = lambda x : x) :
@@ -57,16 +57,16 @@ def sq_rich_study(n, m, u = lambda x : x) :
   element of any variant of the Fraenkel-Simpson construction"""
   word = sq_rich_of(u, n)
   word_len = len(word)
-  u_i = u(n)
-  u_i_next = u(n + 1)
-  print("n\tlen\tnb sq\tdefect")
+  u_i = u(n + 1)
+  u_i_next = u(n + 2)
+  print("n\tlen\tnb sq\tdefect\tdensity")
   for i in range(n, m + 1) :
     nb_squares = naive.nb_squares(word)
     print("{}\t{}\t{}\t{}".format(i, word_len, nb_squares, word_len - nb_squares + 1))
-    word += "0" * u_i + "1" + "0" * u_i_next + "1" + "0" * u_i + "1"
+    word += "0" * u_i_next + "1" + "0" * u_i + "1" + "0" * u_i_next + "1"
     word_len += 2 * u_i + u_i_next + 2
     u_i = u_i_next
-    u_i_next = u(i + 2)
+    u_i_next = u(i + 3)
 
 ##########################################
 # some integer sequences
@@ -101,16 +101,28 @@ def pow2(n) :
 def odd(n) :
   return 2 * n + 1
 
+def lin(a, b = 0) :
+  return lambda x : a * x + b
+
+def sqrt(n) :
+  assert n >= 0
+  root = 0
+  sq_of_root = 0
+  while sq_of_root <= n :
+    sq_of_root += 2 * root + 1
+    root += 1
+  return root - 1
+
 ##########################################
 # main
 
-u = fibo
-n = 15
+u = lambda x : x - sqrt(x)
+n = 100
 
-for i in range(n + 1) :
+for i in range(n, n + 1) :
   print(sq_rich_of(u, i))
 
-#sq_rich_study(0, n, u)
+#sq_rich_study(100, n, u)
 
 #%prun( study_of_sq_rich(50) )
 
