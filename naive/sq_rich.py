@@ -113,24 +113,37 @@ def sqrt(n) :
     root += 1
   return root - 1
 
+def adic(p, n) :
+  res = 0
+  while n % p == 0 :
+    n /= p
+    res += 1
+  return res
+
+def sum_adic(p, n) :
+  sum = 0
+  for i in range(1, n + 1) :
+    sum += adic(p, i)
+  return sum
+
 ##########################################
 # main
 
-u = lambda x : x - sqrt(x)
-n = 100
+u = lambda x : sum_adic(2, x)
+n = 500
 
-for i in range(n, n + 1) :
-  print(sq_rich_of(u, i))
+#for i in range(n + 1) :
+# print(sq_rich_of(u, i))
 
-#sq_rich_study(100, n, u)
+#sq_rich_study(0, n, u)
+
+for i in range(n + 1) :
+  print(u(i))
+
+
+
 
 #%prun( study_of_sq_rich(50) )
-
-
-
-  
-    
-
 #sq_rich(4)
 #00101001000100100010000100010000100000100001000001
 

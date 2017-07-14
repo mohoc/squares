@@ -56,8 +56,17 @@ def squares_distribution(sq_inventory, len_word) :
 
 #l for lacunar, s for simple, d for double
 def print_squares_distribution(sq_distrib, characters = ('l', 's', 'd')) :
-  n = len(sq_distrib)
-  for pos in range(n) :
+  d = len(sq_distrib)
+  for pos in range(d) :
+    print(characters[sq_distrib[pos]], end = "")
+  print("")
+
+def print_squares_distribution_with_word(word, sq_distrib, characters = ('l', 's', 'd')) :
+  d = len(sq_distrib)
+  assert d == len(word) + 1
+  print(characters[sq_distrib[0]], end = "")
+  for pos in range(1, d) :
+    print(word[pos - 1], end = "")
     print(characters[sq_distrib[pos]], end = "")
   print("")
 
@@ -89,7 +98,7 @@ def squares_info(word) :
   print("### number of squares : {}".format(nb_squares))
   print("### square defect : {}".format(defect))
   print("### square distribution :")
-  print_squares_distribution(sq_distrib, ('_', '-', '*'))
+  print_squares_distribution_with_word(word, sq_distrib, ('_', '-', '*'))
   if not input("print the square factors ? [Y/n] : ") in ["n", "N", "no", "No"]:
     print("### squares :")
     for square, first_pos in squares_positions :
