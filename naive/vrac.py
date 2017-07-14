@@ -18,6 +18,15 @@ def thue_morse(n) :
 #print(thue_morse(3))
 #print(thue_morse(10))
 
+def test(a, b = 0, c = -1) :
+  return "OK"
+
+"""
+print(test(2))
+print(test(2,3))
+print(test(2,3,4))
+"""
+
 
 
 ##########################################
